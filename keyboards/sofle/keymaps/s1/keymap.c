@@ -9,9 +9,9 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_RCTL, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, TG(2), LALT_T(KC_RALT), MO(1), KC_SPC, LGUI_T(KC_ENT), RGUI_T(KC_ENT), KC_BSPC, MO(1), LALT_T(KC_RALT), TG(2)),
-	[1] = LAYOUT(KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_UNDS, KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_QUOT, KC_NUHS, KC_TRNS, KC_EQL, KC_MINS, KC_RPRN, KC_RCBR, KC_RBRC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NUBS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL, KC_TRNS, KC_TRNS, KC_TRNS),
-	[2] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NUM, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_UP, KC_NO, KC_NO, KC_P7, KC_P8, KC_P9, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, KC_P4, KC_P5, KC_P6, KC_NO, KC_NO, KC_NO, KC_NO, TO(3), TO(3), TO(3), TO(3), TO(3), KC_NO, KC_CAPS, KC_P1, KC_P2, KC_P3, KC_P0, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+	[0] = LAYOUT(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_RCTL, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, TO(0), TG(2), LALT_T(KC_RALT), LT(1,KC_ENT), LGUI_T(KC_SPC), RGUI_T(KC_ENT), LT(1,KC_BSPC), LALT_T(KC_RALT), TG(2), TO(0)),
+	[1] = LAYOUT(KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_UNDS, KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_QUOT, KC_NUHS, KC_TRNS, KC_EQL, KC_MINS, KC_RPRN, KC_RCBR, KC_RBRC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NUBS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
+	[2] = LAYOUT(KC_NO, TO(3), TO(3), TO(3), TO(3), TO(3), KC_NUM, KC_CAPS, RGB_TOG, KC_NO, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_UP, KC_NO, KC_NO, KC_P7, KC_P8, KC_P9, KC_NO, RGB_M_P, RGB_M_B, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, KC_P4, KC_P5, KC_P6, KC_NO, RGB_M_G, RGB_M_SW, RGB_VAI, RGB_VAD, RGB_SAI, RGB_SAD, RGB_HUI, RGB_HUD, KC_NO, KC_NO, KC_P1, KC_P2, KC_P3, KC_P0, RGB_SPI, RGB_SPD, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 	[3] = LAYOUT(KC_F4, KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_F3, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_F2, KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_UP, KC_K, KC_L, KC_GRV, KC_F1, KC_LSFT, KC_Z, KC_C, KC_C, KC_V, KC_MUTE, KC_NO, KC_B, KC_LEFT, KC_DOWN, KC_RGHT, KC_DOT, KC_MINS, TO(0), KC_TRNS, KC_LGUI, KC_ENT, KC_SPC, KC_NO, MO(2), KC_NO, KC_TRNS, KC_NO)
 };
 
@@ -28,7 +28,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 
 enum sofle_layers {
     _QWERTY,
-    _SIGNS,
+    _SYMBOLS,
     _NUMPAD,
     _GAMEPAD,
 };
@@ -226,7 +226,7 @@ static void print_master(void) {
         case _QWERTY:
             oled_write_P(PSTR("Base\n"), false);
             break;
-        case _SIGNS:
+        case _SYMBOLS:
             oled_write_P(PSTR("Signs\n"), false);
             break;
         case _NUMPAD:
@@ -265,4 +265,83 @@ bool oled_task_user(void) {
     return false;
 }
 
+#endif
+
+
+#define INDICATOR_BRIGHTNESS 150
+#define HSV_GGREEN        72, 255, 255
+// 36 offset to other side...
+//2 offset from diagram
+#define THUMB_ROW(hsv)	\
+	{ 0+ 0, 1, hsv}, \
+	{ 9+ 0, 2, hsv}, \
+	{19+ 0, 2, hsv}, \
+	{ 0+36, 1, hsv}, \
+	{ 9+36, 2, hsv}, \
+	{19+36, 2, hsv}
+// #define RGBLIGHT_ENABLE()
+
+#ifdef RGBLIGHT_ENABLE
+char layer_state_str[70];
+// Now define the array of layers. Later layers take precedence
+
+// QWERTY,
+const rgblight_segment_t PROGMEM layer_qwerty_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_GGREEN)
+);
+
+// _SYMBOL,
+const rgblight_segment_t PROGMEM layer_symbol_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_SPRINGGREEN)
+);
+
+//_NUMPAD
+const rgblight_segment_t PROGMEM layer_numpad_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    {16+36,3,HSV_RED},
+    {21+36,3,HSV_RED},
+    {26+36,3,HSV_RED},
+    {24+36,2,HSV_AZURE},
+    THUMB_ROW(HSV_AZURE)
+);
+
+// _GAMEPAD,
+const rgblight_segment_t PROGMEM layer_game_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    {16,2,HSV_GREEN},
+    {12,1,HSV_GREEN},
+    {22,1,HSV_GREEN},
+    {20,1,HSV_GREEN},
+    {16+36+1,2,HSV_GREEN},
+    {12+36+1,1,HSV_GREEN},
+    {22+36+1,1,HSV_GREEN},
+    {1,4,HSV_TEAL}
+);
+
+
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    layer_qwerty_lights,
+	layer_symbol_lights,
+	layer_numpad_lights,
+	layer_game_lights
+);
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+// enum sofle_layers {
+//     _QWERTY,
+//     _SIGNS,
+//     _NUMPAD,
+//     _GAMEPAD,
+// };
+	rgblight_set_layer_state(0,  layer_state_cmp(default_layer_state,_QWERTY));
+	rgblight_set_layer_state(1, layer_state_cmp(state, _SYMBOLS));
+	rgblight_set_layer_state(2, layer_state_cmp(state, _NUMPAD));
+	rgblight_set_layer_state(3, layer_state_cmp(state, _GAMEPAD));
+    return state;
+}
+void keyboard_post_init_user(void) {
+    // Enable the LED layers
+    rgblight_layers = my_rgb_layers;
+
+	// rgblight_mode(10);// haven't found a way to set this in a more useful way
+
+}
 #endif

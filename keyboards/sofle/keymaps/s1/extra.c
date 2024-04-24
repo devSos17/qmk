@@ -2,7 +2,7 @@
 
 enum sofle_layers {
     _QWERTY,
-    _SIGNS,
+    _SYMBOLS,
     _NUMPAD,
     _GAMEPAD,
 };
@@ -200,7 +200,7 @@ static void print_master(void) {
         case _QWERTY:
             oled_write_P(PSTR("Base\n"), false);
             break;
-        case _SIGNS:
+        case _SYMBOLS:
             oled_write_P(PSTR("Signs\n"), false);
             break;
         case _NUMPAD:
@@ -239,4 +239,83 @@ bool oled_task_user(void) {
     return false;
 }
 
+#endif
+
+
+#define INDICATOR_BRIGHTNESS 150
+#define HSV_GGREEN        72, 255, 255
+// 36 offset to other side...
+//2 offset from diagram
+#define THUMB_ROW(hsv)	\
+	{ 0+ 0, 1, hsv}, \
+	{ 9+ 0, 2, hsv}, \
+	{19+ 0, 2, hsv}, \
+	{ 0+36, 1, hsv}, \
+	{ 9+36, 2, hsv}, \
+	{19+36, 2, hsv}
+// #define RGBLIGHT_ENABLE()
+
+#ifdef RGBLIGHT_ENABLE
+char layer_state_str[70];
+// Now define the array of layers. Later layers take precedence
+
+// QWERTY,
+const rgblight_segment_t PROGMEM layer_qwerty_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_GGREEN)
+);
+
+// _SYMBOL,
+const rgblight_segment_t PROGMEM layer_symbol_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_SPRINGGREEN)
+);
+
+//_NUMPAD
+const rgblight_segment_t PROGMEM layer_numpad_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    {16+36,3,HSV_RED},
+    {21+36,3,HSV_RED},
+    {26+36,3,HSV_RED},
+    {24+36,2,HSV_AZURE},
+    THUMB_ROW(HSV_AZURE)
+);
+
+// _GAMEPAD,
+const rgblight_segment_t PROGMEM layer_game_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    {16,2,HSV_GREEN},
+    {12,1,HSV_GREEN},
+    {22,1,HSV_GREEN},
+    {20,1,HSV_GREEN},
+    {16+36+1,2,HSV_GREEN},
+    {12+36+1,1,HSV_GREEN},
+    {22+36+1,1,HSV_GREEN},
+    {1,4,HSV_TEAL}
+);
+
+
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    layer_qwerty_lights,
+	layer_symbol_lights,
+	layer_numpad_lights,
+	layer_game_lights
+);
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+// enum sofle_layers {
+//     _QWERTY,
+//     _SIGNS,
+//     _NUMPAD,
+//     _GAMEPAD,
+// };
+	rgblight_set_layer_state(0,  layer_state_cmp(default_layer_state,_QWERTY));
+	rgblight_set_layer_state(1, layer_state_cmp(state, _SYMBOLS));
+	rgblight_set_layer_state(2, layer_state_cmp(state, _NUMPAD));
+	rgblight_set_layer_state(3, layer_state_cmp(state, _GAMEPAD));
+    return state;
+}
+void keyboard_post_init_user(void) {
+    // Enable the LED layers
+    rgblight_layers = my_rgb_layers;
+
+	// rgblight_mode(10);// haven't found a way to set this in a more useful way
+
+}
 #endif
