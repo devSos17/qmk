@@ -5,6 +5,7 @@ enum sofle_layers {
     _SYMBOLS,
     _NUMPAD,
     _GAMEPAD,
+    _MOUSE,
 };
 
 
@@ -209,6 +210,9 @@ static void print_master(void) {
         case _GAMEPAD:
             oled_write_P(PSTR("Game\n"), false);
             break;
+        case _MOUSE:
+            oled_write_P(PSTR("Mouse\n"), false);
+            break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
@@ -243,7 +247,7 @@ bool oled_task_user(void) {
 
 
 #define INDICATOR_BRIGHTNESS 150
-#define HSV_GGREEN        72, 255, 255
+#define HSV_GGREEN        62, 255, 255
 // 36 offset to other side...
 //2 offset from diagram
 #define THUMB_ROW(hsv)	\
@@ -287,7 +291,11 @@ const rgblight_segment_t PROGMEM layer_game_lights[] = RGBLIGHT_LAYER_SEGMENTS(
     {16+36+1,2,HSV_GREEN},
     {12+36+1,1,HSV_GREEN},
     {22+36+1,1,HSV_GREEN},
-    {1,4,HSV_TEAL}
+    {1,4,HSV_RED}
+);
+// _MOUSE
+const rgblight_segment_t PROGMEM layer_mouse_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_TEAL)
 );
 
 
@@ -295,7 +303,8 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer_qwerty_lights,
 	layer_symbol_lights,
 	layer_numpad_lights,
-	layer_game_lights
+	layer_game_lights,
+    layer_mouse_lights
 );
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -304,11 +313,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 //     _SIGNS,
 //     _NUMPAD,
 //     _GAMEPAD,
+    // _MOUSE,
 // };
 	rgblight_set_layer_state(0,  layer_state_cmp(default_layer_state,_QWERTY));
 	rgblight_set_layer_state(1, layer_state_cmp(state, _SYMBOLS));
 	rgblight_set_layer_state(2, layer_state_cmp(state, _NUMPAD));
 	rgblight_set_layer_state(3, layer_state_cmp(state, _GAMEPAD));
+	rgblight_set_layer_state(4, layer_state_cmp(state, _MOUSE));
     return state;
 }
 void keyboard_post_init_user(void) {

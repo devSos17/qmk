@@ -9,10 +9,11 @@
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_RCTL, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, TO(0), TG(2), LALT_T(KC_RALT), LT(1,KC_ENT), LGUI_T(KC_SPC), RGUI_T(KC_ENT), LT(1,KC_BSPC), LALT_T(KC_RALT), TG(2), TO(0)),
-	[1] = LAYOUT(KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_UNDS, KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_QUOT, KC_NUHS, KC_TRNS, KC_EQL, KC_MINS, KC_RPRN, KC_RCBR, KC_RBRC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NUBS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[2] = LAYOUT(KC_NO, TO(3), TO(3), TO(3), TO(3), TO(3), KC_NUM, KC_CAPS, RGB_TOG, KC_NO, RGB_MOD, RGB_RMOD, KC_NO, KC_NO, KC_NO, KC_UP, KC_NO, KC_NO, KC_P7, KC_P8, KC_P9, KC_NO, RGB_M_P, RGB_M_B, KC_NO, KC_NO, KC_LEFT, KC_DOWN, KC_RGHT, KC_NO, KC_P4, KC_P5, KC_P6, KC_NO, RGB_M_G, RGB_M_SW, RGB_VAI, RGB_VAD, RGB_SAI, RGB_SAD, RGB_HUI, RGB_HUD, KC_NO, KC_NO, KC_P1, KC_P2, KC_P3, KC_P0, RGB_SPI, RGB_SPD, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-	[3] = LAYOUT(KC_F4, KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_F3, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_F2, KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_UP, KC_K, KC_L, KC_GRV, KC_F1, KC_LSFT, KC_Z, KC_C, KC_C, KC_V, KC_MUTE, KC_NO, KC_B, KC_LEFT, KC_DOWN, KC_RGHT, KC_DOT, KC_MINS, TO(0), KC_TRNS, KC_LGUI, KC_ENT, KC_SPC, KC_NO, MO(2), KC_NO, KC_TRNS, KC_NO)
+	[0] = LAYOUT(KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_RCTL, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MUTE, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_LALT, TG(2), KC_RALT, KC_LALT, LT(1,KC_ENT), LGUI_T(KC_SPC), SC_SENT, LT(1,KC_BSPC), KC_LGUI, KC_RALT, TG(2)),
+	[1] = LAYOUT(KC_F12, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_TRNS, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_UNDS, KC_TRNS, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_QUOT, KC_NUHS, KC_TRNS, KC_EQL, KC_MINS, KC_RPRN, KC_RCBR, KC_RBRC, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NUBS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TG(4), KC_TRNS, KC_TRNS, TG(4), KC_BSPC, KC_TRNS, KC_TRNS),
+	[2] = LAYOUT(KC_TRNS, TO(3), TO(3), TO(3), TO(3), TO(3), KC_NUM, KC_CAPS, RGB_TOG, KC_NO, RGB_MOD, RGB_RMOD, KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_P7, KC_P8, KC_P9, KC_NO, RGB_M_P, RGB_M_B, TO(0), KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_P4, KC_P5, KC_P6, KC_NO, KC_TRNS, RGB_M_SW, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_P1, KC_P2, KC_P3, KC_P0, RGB_SPI, RGB_SPD, TO(0), KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TO(0)),
+	[3] = LAYOUT(KC_F4, KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_F3, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_F2, KC_LCTL, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_UP, KC_K, KC_L, KC_GRV, KC_F1, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_MUTE, KC_NO, KC_B, KC_LEFT, KC_DOWN, KC_RGHT, KC_DOT, KC_MINS, TO(0), KC_TRNS, KC_LGUI, KC_TRNS, KC_SPC, MO(0), MO(1), KC_TRNS, KC_TRNS, KC_TRNS),
+	[4] = LAYOUT(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_WH_U, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, TO(0), KC_NO, KC_WH_L, KC_WH_D, KC_WH_R, KC_NO, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BTN3, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, TO(0), KC_BTN2, KC_BTN1, TO(0), KC_TRNS, KC_TRNS, KC_TRNS)
 };
 
 #if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
@@ -31,6 +32,7 @@ enum sofle_layers {
     _SYMBOLS,
     _NUMPAD,
     _GAMEPAD,
+    _MOUSE,
 };
 
 
@@ -235,6 +237,9 @@ static void print_master(void) {
         case _GAMEPAD:
             oled_write_P(PSTR("Game\n"), false);
             break;
+        case _MOUSE:
+            oled_write_P(PSTR("Mouse\n"), false);
+            break;
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
@@ -269,7 +274,7 @@ bool oled_task_user(void) {
 
 
 #define INDICATOR_BRIGHTNESS 150
-#define HSV_GGREEN        72, 255, 255
+#define HSV_GGREEN        62, 255, 255
 // 36 offset to other side...
 //2 offset from diagram
 #define THUMB_ROW(hsv)	\
@@ -313,7 +318,11 @@ const rgblight_segment_t PROGMEM layer_game_lights[] = RGBLIGHT_LAYER_SEGMENTS(
     {16+36+1,2,HSV_GREEN},
     {12+36+1,1,HSV_GREEN},
     {22+36+1,1,HSV_GREEN},
-    {1,4,HSV_TEAL}
+    {1,4,HSV_RED}
+);
+// _MOUSE
+const rgblight_segment_t PROGMEM layer_mouse_lights[] = RGBLIGHT_LAYER_SEGMENTS(
+    THUMB_ROW(HSV_TEAL)
 );
 
 
@@ -321,7 +330,8 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer_qwerty_lights,
 	layer_symbol_lights,
 	layer_numpad_lights,
-	layer_game_lights
+	layer_game_lights,
+    layer_mouse_lights
 );
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -330,11 +340,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 //     _SIGNS,
 //     _NUMPAD,
 //     _GAMEPAD,
+    // _MOUSE,
 // };
 	rgblight_set_layer_state(0,  layer_state_cmp(default_layer_state,_QWERTY));
 	rgblight_set_layer_state(1, layer_state_cmp(state, _SYMBOLS));
 	rgblight_set_layer_state(2, layer_state_cmp(state, _NUMPAD));
 	rgblight_set_layer_state(3, layer_state_cmp(state, _GAMEPAD));
+	rgblight_set_layer_state(4, layer_state_cmp(state, _MOUSE));
     return state;
 }
 void keyboard_post_init_user(void) {
